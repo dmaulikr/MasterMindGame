@@ -10,14 +10,18 @@
 
 @implementation Cor
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame cor:(UIColor*)cor valor:(int)valor;
+
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self setColor:cor];
+        [self setValor:valor];
     }
     return self;
 }
+
+
 
 - (void)drawRect:(CGRect)rect
 {

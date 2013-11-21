@@ -20,6 +20,9 @@
 		FF9CB757183BF53B00A1E133 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF9CB755183BF53B00A1E133 /* InfoPlist.strings */; };
 		FF9CB759183BF53B00A1E133 /* MasterMindTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9CB758183BF53B00A1E133 /* MasterMindTests.m */; };
 		FF9ECF25183BF9C300B8B539 /* Cor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9ECF24183BF9C300B8B539 /* Cor.m */; };
+		FFC368A8183E7163003A81B9 /* GeralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC368A6183E7163003A81B9 /* GeralViewController.m */; };
+		FFC368A9183E7163003A81B9 /* GeralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC368A7183E7163003A81B9 /* GeralViewController.xib */; };
+		FFC368AB183E71CD003A81B9 /* Entrada.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC368AA183E71CD003A81B9 /* Entrada.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		FF9CB758183BF53B00A1E133 /* MasterMindTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterMindTests.m; sourceTree = "<group>"; };
 		FF9ECF23183BF9C300B8B539 /* Cor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cor.h; sourceTree = "<group>"; };
 		FF9ECF24183BF9C300B8B539 /* Cor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cor.m; sourceTree = "<group>"; };
+		FFC368A5183E7163003A81B9 /* GeralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeralViewController.h; sourceTree = "<group>"; };
+		FFC368A6183E7163003A81B9 /* GeralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeralViewController.m; sourceTree = "<group>"; };
+		FFC368A7183E7163003A81B9 /* GeralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeralViewController.xib; sourceTree = "<group>"; };
+		FFC368AA183E71CD003A81B9 /* Entrada.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Entrada.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +117,7 @@
 		FF9CB739183BF53B00A1E133 /* MasterMind */ = {
 			isa = PBXGroup;
 			children = (
+				FFC368A4183E7058003A81B9 /* View */,
 				FF9CB763183BF58000A1E133 /* Controler */,
 				FF9CB762183BF57200A1E133 /* Model */,
 				FF9CB742183BF53B00A1E133 /* AppDelegate.h */,
@@ -159,10 +167,21 @@
 		FF9CB763183BF58000A1E133 /* Controler */ = {
 			isa = PBXGroup;
 			children = (
-				FF9ECF23183BF9C300B8B539 /* Cor.h */,
-				FF9ECF24183BF9C300B8B539 /* Cor.m */,
+				FFC368A5183E7163003A81B9 /* GeralViewController.h */,
+				FFC368A6183E7163003A81B9 /* GeralViewController.m */,
+				FFC368A7183E7163003A81B9 /* GeralViewController.xib */,
 			);
 			name = Controler;
+			sourceTree = "<group>";
+		};
+		FFC368A4183E7058003A81B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF9ECF23183BF9C300B8B539 /* Cor.h */,
+				FF9ECF24183BF9C300B8B539 /* Cor.m */,
+				FFC368AA183E71CD003A81B9 /* Entrada.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +259,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC368A9183E7163003A81B9 /* GeralViewController.xib in Resources */,
 				FF9CB73E183BF53B00A1E133 /* InfoPlist.strings in Resources */,
 				FF9CB746183BF53B00A1E133 /* Images.xcassets in Resources */,
+				FFC368AB183E71CD003A81B9 /* Entrada.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +283,7 @@
 			files = (
 				FF9ECF25183BF9C300B8B539 /* Cor.m in Sources */,
 				FF9CB744183BF53B00A1E133 /* AppDelegate.m in Sources */,
+				FFC368A8183E7163003A81B9 /* GeralViewController.m in Sources */,
 				FF9CB740183BF53B00A1E133 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

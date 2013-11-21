@@ -10,4 +10,7 @@
 
 @interface Cor : UIView
 @property (nonatomic,strong) UIColor* color;
+@property int valor;
+
+-(id)initWithFrame:(CGRect)frame cor:(UIColor*)cor valor:(int)valor;
 @end
