@@ -7,6 +7,10 @@
 //
 
 #import "GeralViewController.h"
+#import "Game.h"
+#import "myTry.h"
+#import "ScoreViewController.h"
+#import "NewGameViewController.h"
 
 @interface GeralViewController ()
 
@@ -18,11 +22,24 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        [[self tableView] setTableHeaderView:[self headerView]];
+        [[self footer] setDelegate:self];
+        [[self footer] setDataSource:self];
+        [[self navigationItem] setTitle:@"MasterMind"];
+        
+        
+        
+        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"Novo Jogo" style:UIBarButtonItemStyleBordered target:self action:@selector(nGame:)];
+        [[self navigationItem] setRightBarButtonItem:bbi animated:YES];
+        
+        
     }
     return self;
 }
-
+- (void)viewDidAppear:(BOOL)animated {
+    [[self tableView] reloadData];
+    [[self footer] reloadAllComponents];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,7 +50,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
+-(IBAction)nGame:(id)sender {
+    NewGameViewController *gvc = [[NewGameViewController alloc] init];
+    [[self navigationController] pushViewController:gvc animated:YES];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -44,16 +64,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[[Game meuGame] trys] count];
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,69 +80,91 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
+    long realLinha = [[[Game meuGame] trys] count] - indexPath.row -1;
     
-    // Configure the cell...
+    myTry *t = [[[Game meuGame] trys] objectAtIndex:realLinha];
     
+    for (int i = 0; i < [[t tentativas] count]; i++) {
+        UIView *u = [[UIView alloc] initWithFrame:CGRectMake(i*50, 0, 40, 40)];
+        NSNumber *x = [[t tentativas] objectAtIndex:i];
+        UIColor *mt = [[[Game meuGame] cores] objectAtIndex:[x integerValue]];
+        [u setBackgroundColor:mt];
+        [cell addSubview:u];
+    }
+    for (int g = 0; g < [t vlPlace]; g++) {
+        CGRect re = CGRectMake((50*[[t tentativas] count])+100+(g*50), 10, 20, 20);
+        UIView *h = [[UIView alloc] initWithFrame:re];
+        [h setBackgroundColor:[UIColor greenColor]];
+        [cell addSubview:h];
+    }
+    for (int g = 0; g < [t vlExist]; g++) {
+        CGRect re = CGRectMake((50*([[t tentativas] count]+[t vlPlace]))+100+(g*50), 10, 20, 20);
+        UIView *h = [[UIView alloc] initWithFrame:re];
+        [h setBackgroundColor:[UIColor redColor]];
+        [cell addSubview:h];
+    }
+    NSString *s = [[NSString alloc] initWithFormat:@"%d",[t vlExist]];
+    NSString *d = [[NSString alloc] initWithFormat:@"%d",[t vlPlace]];
+    [[cell textLabel] setText:s];
+    [[cell detailTextLabel] setText:d];
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+
+- (UIView*) headerView {
+    if (!_headerView)
+        [[NSBundle mainBundle] loadNibNamed:@"Entrada" owner:self options:nil];
+    return _headerView;
+
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Table view delegate
-
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-
-    // Pass the selected object to the new view controller.
+- (IBAction)okClick:(id)sender {
     
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    if ([[Game meuGame] gameOver]) {
+        ScoreViewController *svc = [[ScoreViewController alloc] init];
+        [[self navigationController] pushViewController:svc animated:YES];
+    } else {
+    
+    NSMutableArray *arTemp = [[NSMutableArray alloc] init];
+    for (int i = 0; i < [[Game meuGame] difilcudade]; i++) {
+        NSNumber *n = [[NSNumber alloc] initWithInt:[[self footer] selectedRowInComponent:i]];
+        [arTemp addObject:n];
+    }
+    myTry *t = [[myTry alloc] init];
+    [t setTentativas:arTemp];
+    [[Game meuGame] addTentativa:t];
+    NSLog(@"%d",[t vlPlace]);
+    
+    
+    if ([[Game meuGame] gameOver]) {
+        ScoreViewController *svc = [[ScoreViewController alloc] init];
+        [[self navigationController] pushViewController:svc animated:YES];
+    }
+    
+    [[self tableView] reloadData];
+    }
 }
- 
- */
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return [[Game meuGame] difilcudade];
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [[[Game meuGame] cores] count];
+}
+//uiPickerViewDelegate
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+    
+}
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+    UIColor *mt = [[[Game meuGame] cores] objectAtIndex:row];
+    UIView *mvi = [[UIView alloc] init];
+    [mvi setBackgroundColor:mt];
+    return mvi;
+}
+
+
 
 @end

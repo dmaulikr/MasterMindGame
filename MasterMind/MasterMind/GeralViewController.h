@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GeralViewController : UITableViewController
-
+@interface GeralViewController : UITableViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+//@property (nonatomic,strong) UIView* Header;
+@property (strong, nonatomic) IBOutlet UIView *headerView;
+- (IBAction)okClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIPickerView *footer;
 @end

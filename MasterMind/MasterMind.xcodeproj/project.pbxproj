@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF7C838818439BB90037E933 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7C838618439BB90037E933 /* ScoreViewController.m */; };
+		FF7C838918439BB90037E933 /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7C838718439BB90037E933 /* ScoreViewController.xib */; };
+		FF7C838D1843A7690037E933 /* NewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7C838B1843A7690037E933 /* NewGameViewController.m */; };
+		FF7C838E1843A7690037E933 /* NewGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7C838C1843A7690037E933 /* NewGameViewController.xib */; };
 		FF9CB734183BF53B00A1E133 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9CB733183BF53B00A1E133 /* Foundation.framework */; };
 		FF9CB736183BF53B00A1E133 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9CB735183BF53B00A1E133 /* CoreGraphics.framework */; };
 		FF9CB738183BF53B00A1E133 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9CB737183BF53B00A1E133 /* UIKit.framework */; };
@@ -19,10 +23,13 @@
 		FF9CB74F183BF53B00A1E133 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9CB737183BF53B00A1E133 /* UIKit.framework */; };
 		FF9CB757183BF53B00A1E133 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF9CB755183BF53B00A1E133 /* InfoPlist.strings */; };
 		FF9CB759183BF53B00A1E133 /* MasterMindTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9CB758183BF53B00A1E133 /* MasterMindTests.m */; };
-		FF9ECF25183BF9C300B8B539 /* Cor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9ECF24183BF9C300B8B539 /* Cor.m */; };
 		FFC368A8183E7163003A81B9 /* GeralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC368A6183E7163003A81B9 /* GeralViewController.m */; };
 		FFC368A9183E7163003A81B9 /* GeralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC368A7183E7163003A81B9 /* GeralViewController.xib */; };
 		FFC368AB183E71CD003A81B9 /* Entrada.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC368AA183E71CD003A81B9 /* Entrada.xib */; };
+		FFC368AE183E7753003A81B9 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC368AD183E7753003A81B9 /* Game.m */; };
+		FFC368B1183E7950003A81B9 /* myTry.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC368B0183E7950003A81B9 /* myTry.m */; };
+		FFC368B4183E9EE2003A81B9 /* minhaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC368B3183E9EE2003A81B9 /* minhaCell.m */; };
+		FFC368B6183E9EFB003A81B9 /* minhaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC368B5183E9EFB003A81B9 /* minhaCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF7C838518439BB90037E933 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
+		FF7C838618439BB90037E933 /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
+		FF7C838718439BB90037E933 /* ScoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
+		FF7C838A1843A7690037E933 /* NewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGameViewController.h; sourceTree = "<group>"; };
+		FF7C838B1843A7690037E933 /* NewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGameViewController.m; sourceTree = "<group>"; };
+		FF7C838C1843A7690037E933 /* NewGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewGameViewController.xib; sourceTree = "<group>"; };
 		FF9CB730183BF53B00A1E133 /* MasterMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9CB733183BF53B00A1E133 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FF9CB735183BF53B00A1E133 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,12 +65,17 @@
 		FF9CB754183BF53B00A1E133 /* MasterMindTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MasterMindTests-Info.plist"; sourceTree = "<group>"; };
 		FF9CB756183BF53B00A1E133 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FF9CB758183BF53B00A1E133 /* MasterMindTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterMindTests.m; sourceTree = "<group>"; };
-		FF9ECF23183BF9C300B8B539 /* Cor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cor.h; sourceTree = "<group>"; };
-		FF9ECF24183BF9C300B8B539 /* Cor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cor.m; sourceTree = "<group>"; };
 		FFC368A5183E7163003A81B9 /* GeralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeralViewController.h; sourceTree = "<group>"; };
 		FFC368A6183E7163003A81B9 /* GeralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeralViewController.m; sourceTree = "<group>"; };
 		FFC368A7183E7163003A81B9 /* GeralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeralViewController.xib; sourceTree = "<group>"; };
 		FFC368AA183E71CD003A81B9 /* Entrada.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Entrada.xib; sourceTree = "<group>"; };
+		FFC368AC183E7753003A81B9 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		FFC368AD183E7753003A81B9 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		FFC368AF183E7950003A81B9 /* myTry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myTry.h; sourceTree = "<group>"; };
+		FFC368B0183E7950003A81B9 /* myTry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myTry.m; sourceTree = "<group>"; };
+		FFC368B2183E9EE2003A81B9 /* minhaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minhaCell.h; sourceTree = "<group>"; };
+		FFC368B3183E9EE2003A81B9 /* minhaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = minhaCell.m; sourceTree = "<group>"; };
+		FFC368B5183E9EFB003A81B9 /* minhaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = minhaCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +178,10 @@
 		FF9CB762183BF57200A1E133 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FFC368AC183E7753003A81B9 /* Game.h */,
+				FFC368AD183E7753003A81B9 /* Game.m */,
+				FFC368AF183E7950003A81B9 /* myTry.h */,
+				FFC368B0183E7950003A81B9 /* myTry.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -177,9 +199,16 @@
 		FFC368A4183E7058003A81B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FF9ECF23183BF9C300B8B539 /* Cor.h */,
-				FF9ECF24183BF9C300B8B539 /* Cor.m */,
 				FFC368AA183E71CD003A81B9 /* Entrada.xib */,
+				FFC368B2183E9EE2003A81B9 /* minhaCell.h */,
+				FFC368B3183E9EE2003A81B9 /* minhaCell.m */,
+				FFC368B5183E9EFB003A81B9 /* minhaCell.xib */,
+				FF7C838518439BB90037E933 /* ScoreViewController.h */,
+				FF7C838618439BB90037E933 /* ScoreViewController.m */,
+				FF7C838718439BB90037E933 /* ScoreViewController.xib */,
+				FF7C838A1843A7690037E933 /* NewGameViewController.h */,
+				FF7C838B1843A7690037E933 /* NewGameViewController.m */,
+				FF7C838C1843A7690037E933 /* NewGameViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -259,6 +288,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC368B6183E9EFB003A81B9 /* minhaCell.xib in Resources */,
+				FF7C838E1843A7690037E933 /* NewGameViewController.xib in Resources */,
+				FF7C838918439BB90037E933 /* ScoreViewController.xib in Resources */,
 				FFC368A9183E7163003A81B9 /* GeralViewController.xib in Resources */,
 				FF9CB73E183BF53B00A1E133 /* InfoPlist.strings in Resources */,
 				FF9CB746183BF53B00A1E133 /* Images.xcassets in Resources */,
@@ -281,8 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF9ECF25183BF9C300B8B539 /* Cor.m in Sources */,
+				FFC368AE183E7753003A81B9 /* Game.m in Sources */,
+				FF7C838818439BB90037E933 /* ScoreViewController.m in Sources */,
 				FF9CB744183BF53B00A1E133 /* AppDelegate.m in Sources */,
+				FFC368B1183E7950003A81B9 /* myTry.m in Sources */,
+				FFC368B4183E9EE2003A81B9 /* minhaCell.m in Sources */,
+				FF7C838D1843A7690037E933 /* NewGameViewController.m in Sources */,
 				FFC368A8183E7163003A81B9 /* GeralViewController.m in Sources */,
 				FF9CB740183BF53B00A1E133 /* main.m in Sources */,
 			);
