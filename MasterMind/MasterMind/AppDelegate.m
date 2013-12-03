@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "GeralViewController.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
 
@@ -15,13 +16,16 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    UITabBarController* tbc = [[UITabBarController alloc] init];
+    
+    MainViewController* mec = [[MainViewController alloc] init];
     GeralViewController* mvc = [[GeralViewController alloc] init];
-    
-    
     
     UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:mvc];
     
-    [[self window] setRootViewController:nv];
+    [tbc setViewControllers:@[nv,mec]];
+    
+    [[self window] setRootViewController:tbc];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

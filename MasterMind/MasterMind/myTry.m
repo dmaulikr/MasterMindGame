@@ -25,25 +25,19 @@
     _vlPlace = 0;
     
     for (int i = 0; i < [[self tentativas] count]; i++) {
+        int subExist = 0;
         if ([[[self tentativas] objectAtIndex:i] integerValue] == [[[self resultados] objectAtIndex:i] integerValue]) {
             _vlPlace++;
-        }
-    }
-    for (int i = 0; i < [[self tentativas] count]; i++) {
-        int subExist = 0;
-        for (int h = 0; h < [[self resultados] count]; h++) {
-            if (i!=h) {
-                if ([[[self tentativas] objectAtIndex:i] integerValue] != [[[self resultados] objectAtIndex:i] integerValue]) {
+        } else {
+            for (int h = 0; h < [[self resultados] count]; h++) {
                 if ([[[self tentativas] objectAtIndex:h] integerValue] != [[[self resultados] objectAtIndex:h] integerValue]) {
                 if ([[[self tentativas] objectAtIndex:i] integerValue] == [[[self resultados] objectAtIndex:h] integerValue]) {
                     subExist++;
-                }
-                }
-                }
+                }}
             }
-        }
-        if (subExist>0) {
-            _vlExist++;
+            if (subExist>0) {
+                _vlExist++;
+            }
         }
     }
 }

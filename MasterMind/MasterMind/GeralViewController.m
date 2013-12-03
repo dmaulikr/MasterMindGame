@@ -31,7 +31,7 @@
         
         UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"Novo Jogo" style:UIBarButtonItemStyleBordered target:self action:@selector(nGame:)];
         [[self navigationItem] setRightBarButtonItem:bbi animated:YES];
-        
+        [self setTitle:@"MasterMind"];
         
     }
     return self;
@@ -93,16 +93,27 @@
         [u setBackgroundColor:mt];
         [cell addSubview:u];
     }
+    for (int i = [[t tentativas] count]; i < 9; i++) {
+        UIView *u = [[UIView alloc] initWithFrame:CGRectMake((50*[[t tentativas] count])+i*50, 0, 40, 40)];
+        [u setBackgroundColor:[UIColor whiteColor]];
+        [cell addSubview:u];
+    }
     for (int g = 0; g < [t vlPlace]; g++) {
-        CGRect re = CGRectMake((50*[[t tentativas] count])+100+(g*50), 10, 20, 20);
+        CGRect re = CGRectMake((50*8)+100+(g*25), 10, 20, 20);
         UIView *h = [[UIView alloc] initWithFrame:re];
         [h setBackgroundColor:[UIColor greenColor]];
         [cell addSubview:h];
     }
     for (int g = 0; g < [t vlExist]; g++) {
-        CGRect re = CGRectMake((50*([[t tentativas] count]+[t vlPlace]))+100+(g*50), 10, 20, 20);
+        CGRect re = CGRectMake((50*(8))+100+((g+[t vlPlace])*25), 10, 20, 20);
         UIView *h = [[UIView alloc] initWithFrame:re];
         [h setBackgroundColor:[UIColor redColor]];
+        [cell addSubview:h];
+    }
+    for (int g = [t vlPlace] + [t vlExist]; g < 9; g++) {
+        CGRect re = CGRectMake((50*(8))+100+(g*25), 10, 20, 20);
+        UIView *h = [[UIView alloc] initWithFrame:re];
+        [h setBackgroundColor:[UIColor whiteColor]];
         [cell addSubview:h];
     }
     NSString *s = [[NSString alloc] initWithFormat:@"%d",[t vlExist]];
@@ -135,7 +146,7 @@
     myTry *t = [[myTry alloc] init];
     [t setTentativas:arTemp];
     [[Game meuGame] addTentativa:t];
-    NSLog(@"%d",[t vlPlace]);
+    NSLog(@"%@ %@ %d %d",[t tentativas],[t resultados],[t vlPlace],[t vlExist]);
     
     
     if ([[Game meuGame] gameOver]) {

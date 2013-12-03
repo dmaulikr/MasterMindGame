@@ -67,5 +67,6 @@
         NSNumber *h = [[NSNumber alloc] initWithLong: arc4random_uniform([[self cores] count])];
         [[self resultado] addObject:h];
     }
+    NSLog(@"%@",[self resultado]);
 }
 @end

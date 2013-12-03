@@ -23,6 +23,14 @@
 		FF9CB74F183BF53B00A1E133 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9CB737183BF53B00A1E133 /* UIKit.framework */; };
 		FF9CB757183BF53B00A1E133 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF9CB755183BF53B00A1E133 /* InfoPlist.strings */; };
 		FF9CB759183BF53B00A1E133 /* MasterMindTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9CB758183BF53B00A1E133 /* MasterMindTests.m */; };
+		FFB1C56818451BB100CBB460 /* combinationGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB1C55C18451BB100CBB460 /* combinationGenerator.m */; };
+		FFB1C56918451BB100CBB460 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB1C55E18451BB100CBB460 /* MainViewController.m */; };
+		FFB1C56A18451BB100CBB460 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFB1C55F18451BB100CBB460 /* MainViewController.xib */; };
+		FFB1C56C18451BB100CBB460 /* symbol.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB1C56318451BB100CBB460 /* symbol.m */; };
+		FFB1C56D18451BB100CBB460 /* symbol1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFB1C56418451BB100CBB460 /* symbol1.jpg */; };
+		FFB1C56E18451BB100CBB460 /* symbol2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFB1C56518451BB100CBB460 /* symbol2.jpg */; };
+		FFB1C56F18451BB100CBB460 /* symbol3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFB1C56618451BB100CBB460 /* symbol3.jpg */; };
+		FFB1C57018451BB100CBB460 /* symbol4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFB1C56718451BB100CBB460 /* symbol4.jpg */; };
 		FFC368A8183E7163003A81B9 /* GeralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC368A6183E7163003A81B9 /* GeralViewController.m */; };
 		FFC368A9183E7163003A81B9 /* GeralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC368A7183E7163003A81B9 /* GeralViewController.xib */; };
 		FFC368AB183E71CD003A81B9 /* Entrada.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC368AA183E71CD003A81B9 /* Entrada.xib */; };
@@ -65,6 +73,17 @@
 		FF9CB754183BF53B00A1E133 /* MasterMindTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MasterMindTests-Info.plist"; sourceTree = "<group>"; };
 		FF9CB756183BF53B00A1E133 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FF9CB758183BF53B00A1E133 /* MasterMindTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterMindTests.m; sourceTree = "<group>"; };
+		FFB1C55B18451BB100CBB460 /* combinationGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = combinationGenerator.h; sourceTree = "<group>"; };
+		FFB1C55C18451BB100CBB460 /* combinationGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = combinationGenerator.m; sourceTree = "<group>"; };
+		FFB1C55D18451BB100CBB460 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		FFB1C55E18451BB100CBB460 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		FFB1C55F18451BB100CBB460 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		FFB1C56218451BB100CBB460 /* symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symbol.h; sourceTree = "<group>"; };
+		FFB1C56318451BB100CBB460 /* symbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = symbol.m; sourceTree = "<group>"; };
+		FFB1C56418451BB100CBB460 /* symbol1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = symbol1.jpg; sourceTree = "<group>"; };
+		FFB1C56518451BB100CBB460 /* symbol2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = symbol2.jpg; sourceTree = "<group>"; };
+		FFB1C56618451BB100CBB460 /* symbol3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = symbol3.jpg; sourceTree = "<group>"; };
+		FFB1C56718451BB100CBB460 /* symbol4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = symbol4.jpg; sourceTree = "<group>"; };
 		FFC368A5183E7163003A81B9 /* GeralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeralViewController.h; sourceTree = "<group>"; };
 		FFC368A6183E7163003A81B9 /* GeralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeralViewController.m; sourceTree = "<group>"; };
 		FFC368A7183E7163003A81B9 /* GeralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeralViewController.xib; sourceTree = "<group>"; };
@@ -135,9 +154,8 @@
 		FF9CB739183BF53B00A1E133 /* MasterMind */ = {
 			isa = PBXGroup;
 			children = (
-				FFC368A4183E7058003A81B9 /* View */,
-				FF9CB763183BF58000A1E133 /* Controler */,
-				FF9CB762183BF57200A1E133 /* Model */,
+				FFB1C53918451B1600CBB460 /* Memory */,
+				FFB1C53818451B0100CBB460 /* MasterMind */,
 				FF9CB742183BF53B00A1E133 /* AppDelegate.h */,
 				FF9CB743183BF53B00A1E133 /* AppDelegate.m */,
 				FF9CB745183BF53B00A1E133 /* Images.xcassets */,
@@ -192,6 +210,58 @@
 				FFC368A5183E7163003A81B9 /* GeralViewController.h */,
 				FFC368A6183E7163003A81B9 /* GeralViewController.m */,
 				FFC368A7183E7163003A81B9 /* GeralViewController.xib */,
+			);
+			name = Controler;
+			sourceTree = "<group>";
+		};
+		FFB1C53818451B0100CBB460 /* MasterMind */ = {
+			isa = PBXGroup;
+			children = (
+				FFC368A4183E7058003A81B9 /* View */,
+				FF9CB763183BF58000A1E133 /* Controler */,
+				FF9CB762183BF57200A1E133 /* Model */,
+			);
+			name = MasterMind;
+			sourceTree = "<group>";
+		};
+		FFB1C53918451B1600CBB460 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				FFB1C57318451C1300CBB460 /* Controler */,
+				FFB1C57218451BF700CBB460 /* Modelo */,
+				FFB1C57118451BE600CBB460 /* Images */,
+			);
+			name = Memory;
+			sourceTree = "<group>";
+		};
+		FFB1C57118451BE600CBB460 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FFB1C56418451BB100CBB460 /* symbol1.jpg */,
+				FFB1C56518451BB100CBB460 /* symbol2.jpg */,
+				FFB1C56618451BB100CBB460 /* symbol3.jpg */,
+				FFB1C56718451BB100CBB460 /* symbol4.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		FFB1C57218451BF700CBB460 /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				FFB1C55B18451BB100CBB460 /* combinationGenerator.h */,
+				FFB1C55C18451BB100CBB460 /* combinationGenerator.m */,
+				FFB1C56218451BB100CBB460 /* symbol.h */,
+				FFB1C56318451BB100CBB460 /* symbol.m */,
+			);
+			name = Modelo;
+			sourceTree = "<group>";
+		};
+		FFB1C57318451C1300CBB460 /* Controler */ = {
+			isa = PBXGroup;
+			children = (
+				FFB1C55D18451BB100CBB460 /* MainViewController.h */,
+				FFB1C55E18451BB100CBB460 /* MainViewController.m */,
+				FFB1C55F18451BB100CBB460 /* MainViewController.xib */,
 			);
 			name = Controler;
 			sourceTree = "<group>";
@@ -290,11 +360,16 @@
 			files = (
 				FFC368B6183E9EFB003A81B9 /* minhaCell.xib in Resources */,
 				FF7C838E1843A7690037E933 /* NewGameViewController.xib in Resources */,
+				FFB1C56E18451BB100CBB460 /* symbol2.jpg in Resources */,
 				FF7C838918439BB90037E933 /* ScoreViewController.xib in Resources */,
+				FFB1C56A18451BB100CBB460 /* MainViewController.xib in Resources */,
 				FFC368A9183E7163003A81B9 /* GeralViewController.xib in Resources */,
 				FF9CB73E183BF53B00A1E133 /* InfoPlist.strings in Resources */,
 				FF9CB746183BF53B00A1E133 /* Images.xcassets in Resources */,
 				FFC368AB183E71CD003A81B9 /* Entrada.xib in Resources */,
+				FFB1C56D18451BB100CBB460 /* symbol1.jpg in Resources */,
+				FFB1C57018451BB100CBB460 /* symbol4.jpg in Resources */,
+				FFB1C56F18451BB100CBB460 /* symbol3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,9 +390,12 @@
 			files = (
 				FFC368AE183E7753003A81B9 /* Game.m in Sources */,
 				FF7C838818439BB90037E933 /* ScoreViewController.m in Sources */,
+				FFB1C56818451BB100CBB460 /* combinationGenerator.m in Sources */,
+				FFB1C56918451BB100CBB460 /* MainViewController.m in Sources */,
 				FF9CB744183BF53B00A1E133 /* AppDelegate.m in Sources */,
 				FFC368B1183E7950003A81B9 /* myTry.m in Sources */,
 				FFC368B4183E9EE2003A81B9 /* minhaCell.m in Sources */,
+				FFB1C56C18451BB100CBB460 /* symbol.m in Sources */,
 				FF7C838D1843A7690037E933 /* NewGameViewController.m in Sources */,
 				FFC368A8183E7163003A81B9 /* GeralViewController.m in Sources */,
 				FF9CB740183BF53B00A1E133 /* main.m in Sources */,

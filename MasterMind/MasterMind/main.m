@@ -1,9 +1,9 @@
 //
 //  main.m
-//  MasterMind
+//  MemoryGame
 //
-//  Created by Tiago Paluch on 19/11/13.
-//  Copyright (c) 2013 Tiago Paluch. All rights reserved.
+//  Created by André Traleski de Campos on 11/21/13.
+//  Copyright (c) 2013 André Traleski de Campos. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
